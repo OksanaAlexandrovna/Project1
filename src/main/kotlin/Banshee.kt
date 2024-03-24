@@ -1,3 +1,6 @@
-class Banshee(name2: String) : Ghosts(name2) {
+import gosts.Ghosts
+
+class Banshee() : Ghosts("Banshee") {
 
 }
+

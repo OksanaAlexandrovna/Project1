@@ -1,3 +1,5 @@
-class Yurei {
+import gosts.Ghosts
+
+class Yurei() : Ghosts("Yurei") {
 
 }

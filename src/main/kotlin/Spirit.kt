@@ -1,3 +1,5 @@
-class Spirit {
+import gosts.Ghosts
+
+class Spirit() : Ghosts("Spirit") {
 
 }

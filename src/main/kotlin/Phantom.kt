@@ -1,5 +1,6 @@
-class Phantom: Ghosts() {
-    val name = "Phantom"
+import gosts.Ghosts
+
+class Phantom() : Ghosts("Phantom") {
     fun strengths() {
         println("The Phantom greatly reduces the sanity of players who stare at it for too long")
     }
@@ -7,9 +8,8 @@ class Phantom: Ghosts() {
     fun weaknesses() {
         println("The Phantom is afraid of bright flashes, so it can be made to disappear with a camera flash")
     }
-    val ability = Ability().invisibility()
 
-    override fun printName() {
+     fun printName() {
         println(name)
     }
 }
