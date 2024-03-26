@@ -1,4 +1,5 @@
-import gosts.Ghosts
+package gosts
+
 
 class Banshee() : Ghosts("Banshee") {
 
