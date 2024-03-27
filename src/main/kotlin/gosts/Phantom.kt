@@ -1,8 +1,16 @@
 package gosts
 
+import evidence.LaserProjector
+import evidence.SpiritBox
+import evidence.Ultraviolet
 import gosts.Ghosts
 
 class Phantom() : Ghosts("Phantom") {
+    init {
+        evidences.add(SpiritBox())
+        evidences.add(LaserProjector())
+        evidences.add(Ultraviolet())
+    }
     fun strengths() {
         println("The gosts.Phantom greatly reduces the sanity of players who stare at it for too long")
     }

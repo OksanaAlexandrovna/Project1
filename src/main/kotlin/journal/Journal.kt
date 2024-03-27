@@ -20,9 +20,10 @@ class Journal() {
         // прогоняет массив через for, ищет имя и записывает его в лист и переходит в след этапу
         val nameAllGhosts = ArrayList<String>()
         for (i in 0 .. ghosts.size - 1) {
-           // ghosts[i].getName()
             nameAllGhosts.add(ghosts[i].name)
         }
         println(nameAllGhosts)
     }
+
+    // Вывести массив призраков с уликами и по уликам вывести определенных призраков?
 }
