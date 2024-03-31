@@ -1,5 +1,6 @@
 package gosts
 
+import ability.gosts.CopyGhostAbility
 import evidence.FreezingTemperatures
 import evidence.SpiritBox
 import evidence.Ultraviolet
@@ -10,5 +11,8 @@ class Mimic() : Ghosts("Mimic") {
         evidences.add(Ultraviolet())
         evidences.add(FreezingTemperatures())
         evidences.add(SpiritBox())
+    }
+    init {
+        abilities.add(CopyGhostAbility())
     }
 }

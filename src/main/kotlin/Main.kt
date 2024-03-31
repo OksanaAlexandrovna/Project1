@@ -1,4 +1,5 @@
 import gosts.Banshee
+import gosts.Deogen
 import journal.Journal
 
 fun main(args: Array<String>) {
@@ -6,4 +7,6 @@ fun main(args: Array<String>) {
     journal.printAllGhostsNames()
     val banshee = Banshee()
     banshee.showEvidences()
+    banshee.showAbilities()
+    journal.printGhostsEvidenceLaser()
 }

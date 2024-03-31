@@ -1,5 +1,6 @@
 package gosts
 
+import ability.gosts.UniqueAnswer
 import evidence.GhostWriting
 import evidence.LaserProjector
 import evidence.SpiritBox
@@ -10,5 +11,8 @@ class Deogen() : Ghosts("Deogen") {
         evidences.add(SpiritBox())
         evidences.add(GhostWriting())
         evidences.add(LaserProjector())
+    }
+    init {
+        abilities.add(UniqueAnswer())
     }
 }

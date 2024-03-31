@@ -1,5 +1,6 @@
 package journal
 
+import evidence.LaserProjector
 import gosts.*
 
 class Journal() {
@@ -26,4 +27,13 @@ class Journal() {
     }
 
     // Вывести массив призраков с уликами и по уликам вывести определенных призраков?
+    fun printGhostsEvidenceLaser() {
+        val ghostsLaserProjector = ArrayList<String>()
+        for (i in 0 until ghosts.size) {
+            if (ghosts[i].isRelates(LaserProjector())) {
+                ghostsLaserProjector.add(ghosts[i].name)
+            }
+        }
+        println(ghostsLaserProjector)
+    }
 }
