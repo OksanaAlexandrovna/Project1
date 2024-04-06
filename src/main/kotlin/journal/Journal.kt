@@ -29,14 +29,14 @@ class Journal() {
     }
 
     // Вывести массив призраков с уликами и по уликам вывести определенных призраков?
-    fun searchGhostsEvidence(evidence: Evidence) {
+    fun searchGhostsEvidence(evidence: Evidence) : List<String> {
         val searchGhostEvidence = ArrayList<String>()
         for (i in 0 until ghosts.size) {
             if (ghosts[i].isRelates(evidence)) {
                 searchGhostEvidence.add(ghosts[i].name)
             }
         }
-        println(searchGhostEvidence)
+        return searchGhostEvidence
     }
 
     fun describeGhost(name: String) {
