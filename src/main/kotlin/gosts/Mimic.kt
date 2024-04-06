@@ -6,7 +6,7 @@ import evidence.SpiritBox
 import evidence.Ultraviolet
 import gosts.Ghosts
 
-class Mimic() : Ghosts("Mimic") {
+class Mimic() : Ghosts("Mimic", "") {
     init {
         evidences.add(Ultraviolet())
         evidences.add(FreezingTemperatures())

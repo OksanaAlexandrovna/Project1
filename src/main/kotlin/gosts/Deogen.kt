@@ -6,7 +6,7 @@ import evidence.LaserProjector
 import evidence.SpiritBox
 import gosts.Ghosts
 
-class Deogen() : Ghosts("Deogen") {
+class Deogen() : Ghosts("Deogen", "") {
     init {
         evidences.add(SpiritBox())
         evidences.add(GhostWriting())
@@ -15,4 +15,5 @@ class Deogen() : Ghosts("Deogen") {
     init {
         abilities.add(UniqueAnswer())
     }
+
 }

@@ -7,7 +7,7 @@ import evidence.LaserProjector
 import evidence.Ultraviolet
 
 
-class Banshee() : Ghosts("Banshee") {
+class Banshee() : Ghosts("Banshee", "A singing siren who attracts her victims with songs. Known for choosing her prey before delivering the killing blow") {
     init {
         evidences.add(Ultraviolet())
         evidences.add(GhostOrb())

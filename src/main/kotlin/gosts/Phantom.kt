@@ -6,7 +6,7 @@ import evidence.SpiritBox
 import evidence.Ultraviolet
 import gosts.Ghosts
 
-class Phantom() : Ghosts("Phantom") {
+class Phantom() : Ghosts("Phantom", "A phantom is a ghost that can inhabit living people, instilling fear in those around them. They are most often summoned using a Ouija Board") {
     init {
         evidences.add(SpiritBox())
         evidences.add(LaserProjector())
