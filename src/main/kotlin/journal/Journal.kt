@@ -1,7 +1,5 @@
 package journal
 
-import evidence.Evidence
-import evidence.LaserProjector
 import gosts.*
 import java.lang.RuntimeException
 
@@ -29,7 +27,7 @@ class Journal() {
     }
 
     // Вывести массив призраков с уликами и по уликам вывести определенных призраков?
-    fun searchGhostsEvidence(evidence: Evidence) : List<String> {
+    fun searchGhostsEvidence(evidence: String) : List<String> {
         val searchGhostEvidence = ArrayList<String>()
         for (i in 0 until ghosts.size) {
             if (ghosts[i].isRelates(evidence)) {
@@ -42,11 +40,12 @@ class Journal() {
     fun describeGhost(name: String) {
         for (ghost in ghosts) {
             if (ghost.name == name) {
-                ghost.showInformationGhost()
+                ghost.showInformationGhost(name)
                 return
             }
         }
         val allGhosts = getAllGhostsNames()
         throw RuntimeException("Non-existent ghost name! Choose a ghost name from the following $allGhosts")
     }
+
 }

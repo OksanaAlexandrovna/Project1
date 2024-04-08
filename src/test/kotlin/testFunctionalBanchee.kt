@@ -14,5 +14,12 @@ class bansheeTest{
         assertEquals("Banshee", result)
     }
 
+    @Test
+    fun checkFullInfo() {
+        val infoGhost = testbansheeTest.showInformationGhost("Banshee")
+        assertEquals(listOf(testbansheeTest.name, testbansheeTest.history,
+            testbansheeTest.abilities.joinToString(), testbansheeTest.evidences.joinToString()), infoGhost)
+    }
+
 
 }
