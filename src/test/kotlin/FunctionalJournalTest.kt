@@ -1,3 +1,4 @@
+import gosts.Yurei
 import journal.Journal
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -20,6 +21,14 @@ class FunctionalJournalTest {
         }
         assertEquals("Non-existent ghost name! Choose a ghost name from the following $names", msg.message)
         testJournalTest.describeGhost("Mimic")
+    }
+
+    @Test
+    fun expectedGhostName() {
+        val infoGhost = testJournalTest.describeGhost("Yurei")
+        val expectedGhost = Yurei()
+        assertEquals(listOf(expectedGhost.name, expectedGhost.history, expectedGhost.evidences.joinToString(),
+            expectedGhost.abilities.joinToString()).sorted(), infoGhost.sorted())
     }
 
     @Test

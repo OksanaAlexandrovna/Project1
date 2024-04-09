@@ -17,8 +17,6 @@ class Journal() {
     }
 
     fun getAllGhostsNames() : List<String> {
-        // лист, в котором будет записываться имя каждого призрака
-        // прогоняет массив через for, ищет имя и записывает его в лист и переходит в след этапу
         val nameAllGhosts = ArrayList<String>()
         for (i in 0 until ghosts.size) {
             nameAllGhosts.add(ghosts[i].name)
@@ -26,7 +24,6 @@ class Journal() {
         return nameAllGhosts
     }
 
-    // Вывести массив призраков с уликами и по уликам вывести определенных призраков?
     fun searchGhostsEvidence(evidence: String) : List<String> {
         val searchGhostEvidence = ArrayList<String>()
         for (i in 0 until ghosts.size) {
@@ -37,11 +34,10 @@ class Journal() {
         return searchGhostEvidence
     }
 
-    fun describeGhost(name: String) {
+    fun describeGhost(name: String) : List<String> {
         for (ghost in ghosts) {
             if (ghost.name == name) {
-                ghost.showInformationGhost(name)
-                return
+                return ghost.showInformationGhost(name)
             }
         }
         val allGhosts = getAllGhostsNames()

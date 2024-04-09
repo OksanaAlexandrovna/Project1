@@ -1,3 +1,4 @@
+import evidence.Ultraviolet
 import gosts.Banshee
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
@@ -5,7 +6,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Assertions
 import kotlin.test.assertContains
 
-class bansheeTest{
+class bansheeTest {
     private val testbansheeTest : Banshee = Banshee()
 
     @Test
@@ -20,6 +21,4 @@ class bansheeTest{
         assertEquals(listOf(testbansheeTest.name, testbansheeTest.history,
             testbansheeTest.abilities.joinToString(), testbansheeTest.evidences.joinToString()), infoGhost)
     }
-
-
 }
