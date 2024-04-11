@@ -15,7 +15,6 @@ open class Ghosts(val name: String, val history: String) {
         return false
     }
 
-    // val allInformation = mutableListOf(name, history, evidences)
     fun showInformationGhost(name: String): List<String> {
         return listOf(name, history, abilities.joinToString(), evidences.joinToString())
     }

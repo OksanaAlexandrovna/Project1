@@ -1,9 +1,14 @@
+import ability.gosts.Ability
+import evidence.Evidence
+import gosts.Ghosts
 import gosts.Yurei
 import journal.Journal
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import java.lang.RuntimeException
 import kotlin.test.assertEquals
+import org.mockito.Mockito
+
 
 class FunctionalJournalTest {
     private val testJournalTest: Journal = Journal()
@@ -71,5 +76,23 @@ class FunctionalJournalTest {
     fun checkUltraviolet() {
         val evidenceName = testJournalTest.searchGhostsEvidence("Ultraviolet")
         assertEquals(listOf("Banshee", "Demon", "Mimic", "Phantom"), evidenceName)
+    }
+
+    @Test
+    fun spyCheckNonExistingEvidence() {
+        val spy = Mockito.spy(testJournalTest.ghosts[0])
+        testJournalTest.ghosts[0] = spy
+        Mockito.`when`(spy.isRelates("Ultraviolet")).thenReturn(false)
+        val result = testJournalTest.searchGhostsEvidence("Ultraviolet")
+        assertEquals(listOf("Demon", "Mimic", "Phantom"), result)
+    }
+
+    @Test
+    fun spyDemo() {
+        val spy = Mockito.spy(Journal::class.java)
+        Mockito.`when`(spy.searchGhostsEvidence("Ultraviolet")).thenReturn(listOf("Banshee", "Demon",
+            "Mimic", "Phantom"))
+        val result = spy.searchGhostsEvidence("Ultraviolet")
+        assertEquals(listOf("Banshee", "Demon", "Mimic", "Phantom"), result)
     }
 }
