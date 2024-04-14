@@ -1,5 +1,4 @@
-import gosts.Spirit
-import gosts.Yurei
+import ru.project.gosts.Yurei
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

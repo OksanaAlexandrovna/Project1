@@ -1,3 +1,3 @@
 
-rootProject.name = "Project1"
+rootProject.name = "GhostApplication"
 

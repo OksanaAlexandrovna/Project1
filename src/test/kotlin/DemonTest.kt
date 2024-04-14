@@ -1,4 +1,4 @@
-import gosts.Demon
+import ru.project.gosts.Demon
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

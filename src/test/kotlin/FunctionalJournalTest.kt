@@ -1,8 +1,5 @@
-import ability.gosts.Ability
-import evidence.Evidence
-import gosts.Ghosts
-import gosts.Yurei
-import journal.Journal
+import ru.project.gosts.Yurei
+import ru.project.journal.Journal
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import java.lang.RuntimeException

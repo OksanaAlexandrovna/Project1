@@ -1,5 +1,4 @@
-import gosts.Deogen
-import gosts.Phantom
+import ru.project.gosts.Phantom
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
