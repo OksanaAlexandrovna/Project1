@@ -6,7 +6,8 @@ import ru.project.evidence.GhostOrb
 import ru.project.evidence.LaserProjector
 import ru.project.gosts.Ghosts
 
-class Yurei() : Ghosts("Yurei", "A Yurei is a ghost that has returned to the physical world, usually for revenge or hatred") {
+class Yurei() : Ghosts("Yurei", "A Yurei is a ghost that has returned to the physical world, usually for " +
+        "revenge or hatred.") {
     init {
         evidences.add(FreezingTemperatures())
         evidences.add(GhostOrb())

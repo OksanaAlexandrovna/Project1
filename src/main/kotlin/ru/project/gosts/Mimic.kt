@@ -6,7 +6,8 @@ import ru.project.evidence.SpiritBox
 import ru.project.evidence.Ultraviolet
 import ru.project.gosts.Ghosts
 
-class Mimic() : Ghosts("Mimic", "") {
+class Mimic() : Ghosts("Mimic", "An impartial imitator who copies the behavioral traits of other ghosts" +
+        " and thereby completely misleads the hunters") {
     init {
         evidences.add(Ultraviolet())
         evidences.add(FreezingTemperatures())

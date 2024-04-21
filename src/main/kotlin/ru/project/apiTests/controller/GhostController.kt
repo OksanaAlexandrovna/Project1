@@ -1,18 +1,24 @@
 package ru.project.apiTests.controller
 
-import ru.project.apiTests.dto.GhostDto
-import ru.project.apiTests.service.GhostService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import ru.project.journal.Journal
 
 @RestController
 @RequestMapping("/ghosts")
 class GhostController(
-    @Autowired private val ghostService: GhostService,
+    @Autowired private val ghostService: Journal
 ) {
     @GetMapping
+    fun getAllGhostsNames(): List<String> = ghostService.getAllGhostsNames()
 
-    fun getAll(): List<GhostDto> = ghostService.getAll()
+    @GetMapping("/search/{evidence}")
+    fun searchGhostsEvidence(@PathVariable("evidence") evidence: String): List<String> =
+        ghostService.searchGhostsEvidence(evidence)
+
+    @GetMapping("/{name}")
+    fun showInformationGhost(@PathVariable("name") name: String): List<String> = ghostService.describeGhost(name)
 }

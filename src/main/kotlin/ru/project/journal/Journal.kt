@@ -1,10 +1,13 @@
 package ru.project.journal
 
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 import ru.project.gosts.*
 import java.lang.RuntimeException
 
+@Service
 class Journal() {
-    val ghosts = ArrayList<Ghosts>()
+    final val ghosts = ArrayList<Ghosts>()
 
     init {
         ghosts.add(Banshee())
