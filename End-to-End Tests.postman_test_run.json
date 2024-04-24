@@ -1,0 +1,127 @@
+{
+	"id": "328ca74a-4de3-4ebc-b2a2-3ffb5829b9f4",
+	"name": "End-to-End Tests",
+	"timestamp": "2024-04-24T15:52:44.492Z",
+	"collection_id": "17939511-5729b372-6feb-4fca-9715-6997076ba0fa",
+	"folder_id": "17939511-11f8dd4f-554c-4b47-adca-1f38f37749c4",
+	"environment_id": "17939511-61ad90da-4701-4a28-901a-988ba8e5a7ef",
+	"totalPass": 5,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-04-24T15:52:44.001Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a4dccdd5-c9a3-4e00-aa3a-cf96f0d08a24",
+			"name": "All Ghosts",
+			"url": "http://127.0.0.1:8080/ghosts",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "27aa7ac8-1394-42dd-b76e-9af9def09ac1",
+			"name": "Show Infomations",
+			"url": "http://127.0.0.1:8080/ghosts/Banshee",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true
+				}
+			]
+		},
+		{
+			"id": "e8d95664-897c-408c-9556-4c75d853da7a",
+			"name": "Evidence",
+			"url": "http://127.0.0.1:8080/ghosts/search/Laser Projector",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Folder-level status check": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Folder-level status check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Folder-level status check": true,
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 18,
+	"collection": {
+		"requests": [
+			{
+				"id": "a4dccdd5-c9a3-4e00-aa3a-cf96f0d08a24",
+				"method": "GET"
+			},
+			{
+				"id": "27aa7ac8-1394-42dd-b76e-9af9def09ac1",
+				"method": "GET"
+			},
+			{
+				"id": "e8d95664-897c-408c-9556-4c75d853da7a",
+				"method": "GET"
+			}
+		]
+	}
+}
