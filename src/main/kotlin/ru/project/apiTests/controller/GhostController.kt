@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import ru.project.apiTests.dto.GhostDto
 import ru.project.journal.Journal
 
 @RestController
@@ -20,5 +21,5 @@ class GhostController(
         ghostService.searchGhostsEvidence(evidence)
 
     @GetMapping("/{name}")
-    fun showInformationGhost(@PathVariable("name") name: String): List<String> = ghostService.describeGhost(name)
+    fun showInformationGhost(@PathVariable("name") name: String): GhostDto = ghostService.describeGhost(name)
 }

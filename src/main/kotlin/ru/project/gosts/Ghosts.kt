@@ -1,6 +1,7 @@
 package ru.project.gosts
 
 import ru.project.ability.gosts.Ability
+import ru.project.apiTests.dto.GhostDto
 import ru.project.evidence.Evidence
 
 open class Ghosts(val name: String, val history: String) {
@@ -15,7 +16,7 @@ open class Ghosts(val name: String, val history: String) {
         return false
     }
 
-    fun showInformationGhost(name: String): List<String> {
-        return listOf(name, history, abilities.joinToString(), evidences.joinToString())
+    fun showInformationGhost(name: String): GhostDto {
+        return GhostDto(name, history, abilities.joinToString(), evidences.joinToString())
     }
 }

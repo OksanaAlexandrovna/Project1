@@ -2,6 +2,7 @@ package ru.project.journal
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import ru.project.apiTests.dto.GhostDto
 import ru.project.gosts.*
 import java.lang.RuntimeException
 
@@ -37,7 +38,7 @@ class Journal() {
         return searchGhostEvidence
     }
 
-    fun describeGhost(name: String) : List<String> {
+    fun describeGhost(name: String) : GhostDto {
         for (ghost in ghosts) {
             if (ghost.name == name) {
                 return ghost.showInformationGhost(name)

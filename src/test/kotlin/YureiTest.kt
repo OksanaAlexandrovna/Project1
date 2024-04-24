@@ -1,5 +1,6 @@
 import ru.project.gosts.Yurei
 import org.junit.jupiter.api.Test
+import ru.project.apiTests.dto.GhostDto
 import kotlin.test.assertEquals
 
 class YureiTest {
@@ -14,7 +15,8 @@ class YureiTest {
     @Test
     fun checkInfo() {
         val infoGhost = testYureiTest.showInformationGhost("Yurei")
-        assertEquals(listOf(testYureiTest.name, testYureiTest.history,
+        assertEquals(
+            GhostDto(testYureiTest.name, testYureiTest.history,
             testYureiTest.abilities.joinToString(), testYureiTest.evidences.joinToString()), infoGhost)
     }
 }
