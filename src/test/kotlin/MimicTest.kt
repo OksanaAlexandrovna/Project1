@@ -1,5 +1,6 @@
 import ru.project.gosts.Mimic
 import org.junit.jupiter.api.Test
+import ru.project.apiTests.dto.GhostDto
 import kotlin.test.assertEquals
 
 class MimicTest {
@@ -14,7 +15,8 @@ class MimicTest {
     @Test
     fun checkInfo() {
         val infoGhost = testMimicTest.showInformationGhost("Mimic")
-        assertEquals(listOf(testMimicTest.name, testMimicTest.history,
+        assertEquals(
+            GhostDto(testMimicTest.name, testMimicTest.history,
             testMimicTest.abilities.joinToString(), testMimicTest.evidences.joinToString()), infoGhost)
     }
 }

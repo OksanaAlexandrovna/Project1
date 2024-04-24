@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.boot.test.web.client.TestRestTemplate
 import ru.project.GhostApplication
+import ru.project.apiTests.dto.GhostDto
 import ru.project.journal.Journal
 import kotlin.test.assertEquals
 
@@ -52,15 +53,17 @@ class RestControllerTest {
 
     @Test
     fun showInformationGhost() {
-        Mockito.`when`(journal.describeGhost("Banshee")).thenReturn(arrayListOf("info"))
+        Mockito.`when`(journal.describeGhost("Banshee")).thenReturn(GhostDto("info",".", "d",
+            "d"))
         val url = "http://127.0.0.1:8080/ghosts/Banshee"
-        val result = restTemplate.getForEntity(url, List::class.java)
-        assertEquals(arrayListOf("info"), result.body)
+        val result = restTemplate.getForEntity(url, GhostDto::class.java)
+        assertEquals(GhostDto("info",".", "d", "d"), result.body)
     }
 
     @Test
     fun checkStatusCode2xx() {
-        Mockito.`when`(journal.describeGhost("AnyGhost")).thenReturn(arrayListOf("info"))
+        Mockito.`when`(journal.describeGhost("AnyGhost")).thenReturn(GhostDto("info", "info",
+            "info", "info"))
         val url = "http://127.0.0.1:8080/ghosts/Banshee"
         val result = restTemplate.getForEntity(url, Any::class.java).statusCode.is2xxSuccessful
         assertEquals(true, result)

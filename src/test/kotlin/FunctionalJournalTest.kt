@@ -5,6 +5,7 @@ import org.junit.jupiter.api.assertThrows
 import java.lang.RuntimeException
 import kotlin.test.assertEquals
 import org.mockito.Mockito
+import ru.project.apiTests.dto.GhostDto
 
 
 class FunctionalJournalTest {
@@ -29,8 +30,9 @@ class FunctionalJournalTest {
     fun expectedGhostName() {
         val infoGhost = testJournalTest.describeGhost("Yurei")
         val expectedGhost = Yurei()
-        assertEquals(listOf(expectedGhost.name, expectedGhost.history, expectedGhost.evidences.joinToString(),
-            expectedGhost.abilities.joinToString()).sorted(), infoGhost.sorted())
+        assertEquals(
+            GhostDto(expectedGhost.name, expectedGhost.history, expectedGhost.abilities.joinToString(),
+                expectedGhost.evidences.joinToString()),  infoGhost)
     }
 
     @Test

@@ -1,5 +1,6 @@
 import ru.project.gosts.Demon
 import org.junit.jupiter.api.Test
+import ru.project.apiTests.dto.GhostDto
 import kotlin.test.assertEquals
 
 class DemonTest {
@@ -14,7 +15,8 @@ class DemonTest {
     @Test
     fun checkInfo() {
         val infoGhost = testDemonTest.showInformationGhost("Demon")
-        assertEquals(listOf(testDemonTest.name, testDemonTest.history,
+        assertEquals(
+            GhostDto(testDemonTest.name, testDemonTest.history,
             testDemonTest.abilities.joinToString(), testDemonTest.evidences.joinToString()), infoGhost)
     }
 }

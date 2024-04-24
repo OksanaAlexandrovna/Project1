@@ -1,5 +1,6 @@
 import ru.project.gosts.Banshee
 import org.junit.jupiter.api.Test
+import ru.project.apiTests.dto.GhostDto
 import kotlin.test.assertEquals
 
 class bansheeTest {
@@ -14,7 +15,7 @@ class bansheeTest {
     @Test
     fun checkFullInfo() {
         val infoGhost = testbansheeTest.showInformationGhost("Banshee")
-        assertEquals(listOf(testbansheeTest.name, testbansheeTest.history,
+        assertEquals(GhostDto(testbansheeTest.name, testbansheeTest.history,
             testbansheeTest.abilities.joinToString(), testbansheeTest.evidences.joinToString()), infoGhost)
     }
 }

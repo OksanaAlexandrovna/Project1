@@ -1,5 +1,6 @@
 import ru.project.gosts.Spirit
 import org.junit.jupiter.api.Test
+import ru.project.apiTests.dto.GhostDto
 import kotlin.test.assertEquals
 
 class SpiritTest {
@@ -14,7 +15,8 @@ class SpiritTest {
     @Test
     fun checkInfo() {
         val infoGhost = testSpiritTest.showInformationGhost("Spirit")
-        assertEquals(listOf(testSpiritTest.name, testSpiritTest.history,
+        assertEquals(
+            GhostDto(testSpiritTest.name, testSpiritTest.history,
             testSpiritTest.abilities.joinToString(), testSpiritTest.evidences.joinToString()), infoGhost)
     }
 }
